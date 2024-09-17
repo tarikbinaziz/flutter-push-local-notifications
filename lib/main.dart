@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notification/notification_service.dart';
 
 void main() async {
-  // This is a basic Flutter widget binding.
-  WidgetsFlutterBinding.ensureInitialized();
-  // call initialize method
-  await LocalNotificationService.init();
+  // // This is a basic Flutter widget binding.
+  // WidgetsFlutterBinding.ensureInitialized();
+  // // call initialize method
+  // await LocalNotificationService.init();
 
   runApp(const MyApp());
 }
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
@@ -39,14 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Container(
       child: Center(
           child: TextButton(
-              onPressed: () {
-                LocalNotificationService.showNotification(
-                  title: "title",
-                  body: "body",
-                  payload: "payload",
-                );
-              },
-              child: Text("Get Notification"))),
+              onPressed: () {}, child: const Text("Get Notification"))),
     );
   }
 }
