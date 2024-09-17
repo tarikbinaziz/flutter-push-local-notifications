@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notification/local_notification_service.dart';
 
 void main() async {
   // // This is a basic Flutter widget binding.
-  // WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   // // call initialize method
-  // await LocalNotificationService.init();
+ await LocalNotificationService.initialize();
 
   runApp(const MyApp());
 }
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({super.key});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
